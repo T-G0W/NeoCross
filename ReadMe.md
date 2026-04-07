@@ -22,7 +22,7 @@
 - [💻 System Requirements & Resource Usage](#-system-requirements--resource-usage)
 - [📥 Download & Installation](#-download--installation)
 - [🎮 Usage & Controls](#-usage--controls)
-- [🖼️ Preview](#️-preview)
+- [🖼️ Preview](#-preview)
 - [📞 Support & Contact](#-support--contact)
 - [☕ Support Development](#-support-development)
 - [📜 License](#-license)
@@ -73,9 +73,104 @@ pip install PyQt5
 python crosshair.py
 ```
 
-Key,Action,Availability
-`F2`,Toggle Settings Menu (Show/Hide),✅ Always Active
-`Z`,Cycle Through Colors,🔒 Menu Visible Only
-`C`,Cycle Through Sizes,🔒 Menu Visible Only
-`X`,Cycle Through Shapes,🔒 Menu Visible Only
-`F3`,Exit Program,🔒 Menu Visible Only
+---
+
+## 🎮 Usage & Controls
+
+| Key | Action | Availability |
+|:---:|--------|--------------|
+| **`F2`** | Toggle Settings Menu (Show/Hide) | ✅ Always Active |
+| **`Z`** | Cycle Through Colors | 🔒 Menu Visible Only |
+| **`C`** | Cycle Through Sizes | 🔒 Menu Visible Only |
+| **`X`** | Cycle Through Shapes | 🔒 Menu Visible Only |
+| **`F3`** | Exit Program | 🔒 Menu Visible Only |
+
+### 💡 How It Works
+1. Launch the application → Crosshair appears centered.
+2. Press **`F2`** to open the settings panel (top-right corner).
+3. Customize your crosshair via buttons or hotkeys.
+4. Press **`F2`** again to hide the menu and return to your game.
+5. While hidden, **all hotkeys (`Z`, `C`, `X`, `F3`) are fully disabled**, ensuring zero interference with gameplay. Only `F2` remains active to reopen the menu.
+
+---
+
+## 🖼️ Preview
+
+### 📹 Live Demos
+
+<table>
+  <tr>
+    <td align="center">
+      <b>Menu Interface & Controls</b><br>
+      <img src="https://imgur.com/9NHYn5o.gif" width="100%" alt="TGOW Crosshair Menu Demo">
+    </td>
+    <td align="center">
+      <b>In-Game Usage</b><br>
+      <img src="https://imgur.com/KPiHZHn.gif" width="100%" alt="TGOW Crosshair In-Game Demo">
+    </td>
+  </tr>
+</table>
+
+> 💡 *Tip: If the GIFs don't display, replace the Imgur links above with direct `.gif` URLs (remove `/a/` from the path).*
+
+### 🎯 Available Crosshair Shapes
+
+<table>
+  <tr>
+    <td align="center"><b>Plus</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217838038581299/1.png" width="120"><br><i>Classic cross</i></td>
+    <td align="center"><b>Dot</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217837627412490/2.png" width="120"><br><i>Minimal center point</i></td>
+    <td align="center"><b>Circle</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217836994199663/3.png" width="120"><br><i>Clean ring</i></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Circle + Dot</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217836314464326/4.png" width="120"><br><i>Precision hybrid</i></td>
+    <td align="center"><b>Cross Gap</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217836016795821/5.png" width="120"><br><i>Separated lines</i></td>
+    <td align="center"><b>X-Shape</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217835656220795/6.png" width="120"><br><i>Diagonal cross</i></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><b>Triangle</b><br><img src="https://cdn.discordapp.com/attachments/1491214256711008396/1491217835085533314/7.png" width="120"><br><i>Forward-pointing arrow</i></td>
+  </tr>
+</table>
+
+---
+
+## 📞 Support & Contact
+
+Found a bug, have a suggestion, or need help? Reach out directly:
+
+- 🟣 **Discord:** `t_gow`
+- 🐙 **GitHub Issues:** [Open an Issue](https://github.com/T-G0W/tgow-crosshair-v1/issues)
+
+I actively monitor both channels and appreciate constructive feedback to improve the tool.
+
+---
+
+## ☕ Support Development
+
+If TGOW - CrosshairV1 improves your gameplay or workflow, consider supporting the project:
+
+<div align="center">
+  <a href="https://www.buymeacoffee.com/t-gow" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217">
+  </a>
+</div>
+
+Every contribution goes directly into maintaining and expanding free tools for the community. ❤️
+
+---
+
+## 📜 License
+
+This software is **proprietary** and protected under a custom license.
+
+✅ **Allowed:** Private & commercial use (unmodified)  
+❌ **Restricted:** Modification, redistribution, sublicensing, or integration into other projects **requires prior written permission** from the author.
+
+📄 View the full legal terms in the [`LICENSE`](LICENSE) file.  
+📬 Permission requests: Contact `t_gow` on Discord or open a GitHub Issue.
+
+---
+
+<div align="center">
+  <sub>Made with ❤️ by <strong>T-GOW</strong></sub><br>
+  <a href="#tgow---crosshairv1">⬆ Back to Top</a>
+</div>
