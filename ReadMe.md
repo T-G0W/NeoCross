@@ -71,3 +71,10 @@ git clone https://github.com/T-G0W/tgow-crosshair-v1.git
 cd tgow-crosshair-v1
 pip install PyQt5
 python crosshair.py
+
+Key,Action,Availability
+`F2`,Toggle Settings Menu (Show/Hide),✅ Always Active
+`Z`,Cycle Through Colors,🔒 Menu Visible Only
+`C`,Cycle Through Sizes,🔒 Menu Visible Only
+`X`,Cycle Through Shapes,🔒 Menu Visible Only
+`F3`,Exit Program,🔒 Menu Visible Only
