@@ -102,11 +102,11 @@ python crosshair.py
   <tr>
     <td align="center">
       <b>Menu Interface & Controls</b><br>
-      <img src="[https://imgur.com/9NHYn5o.gif](https://imgur.com/a/tgow-crosshair-preview-5XnKL4t)" width="100%" alt="TGOW Crosshair Menu Demo">
+      <img src="[https://imgur.com/9NHYn5o.gif](https://imgur.com/tgow-crosshair-preview-5XnKL4t)" width="100%" alt="TGOW Crosshair Menu Demo">
     </td>
     <td align="center">
       <b>In-Game Usage</b><br>
-      <img src="[https://imgur.com/KPiHZHn.gif](https://imgur.com/a/tgow-crosshair-KVmL4pt)" width="100%" alt="TGOW Crosshair In-Game Demo">
+      <img src="[https://imgur.com/KPiHZHn.gif](https://imgur.com/tgow-crosshair-KVmL4pt)" width="100%" alt="TGOW Crosshair In-Game Demo">
     </td>
   </tr>
 </table>
