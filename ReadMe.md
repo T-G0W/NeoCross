@@ -100,7 +100,7 @@
   <tr>
     <td align="center">
       <b>Menu Interface & Controls</b><br>
-      <img src="[https://i.ibb.co/zWV8w5Cm/crosshair-menu.gif](https://ibb.co/zWV8w5Cm)" width="450" alt="TGOW Crosshair Menu Demo" autoplay loop>
+      <img src="https://i.ibb.co/zWV8w5Cm/crosshair-menu.gif" width="450" alt="TGOW Crosshair Menu Demo" autoplay loop>
     </td>
     <td align="center">
       <b>In-Game Usage</b><br>
