@@ -99,14 +99,14 @@ python crosshair.py
 ### 📹 Live Demos
 
 <table>
-  <tr>
-    <td align="center">
-      <b>Menu Interface & Controls</b><br>
-      <img src="[https://imgur.com/9NHYn5o.gif](https://imgur.com/tgow-crosshair-preview-5XnKL4t)" width="100%" alt="TGOW Crosshair Menu Demo">
+<tr>
+  <td align="center">
+    <b>Menu Interface & Controls</b><br>
+      <img src="https://i.ibb.co/zWV8w5Cm/crosshair-menu.gif" width="100%" alt="TGOW Crosshair Menu Demo">
     </td>
     <td align="center">
       <b>In-Game Usage</b><br>
-      <img src="[https://imgur.com/KPiHZHn.gif](https://imgur.com/tgow-crosshair-KVmL4pt)" width="100%" alt="TGOW Crosshair In-Game Demo">
+    <img src="https://i.ibb.co/mCQCGk9s/crosshair-game.gif" width="100%" alt="TGOW Crosshair In-Game Demo">
     </td>
   </tr>
 </table>
@@ -117,17 +117,17 @@ python crosshair.py
 
 <table>
   <tr>
-    <td align="center"><b>Plus</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217838038581299/1.png](https://media.discordapp.net/attachments/1491214256711008396/1491217838038581299/1.png?ex=69d6e456&is=69d592d6&hm=2b59ba77eb8c36d2294761aa07d0cec0cf1fff8d4ec55d66348780b61e8c7e10&=&format=webp&quality=lossless)" width="120"><br><i>Classic cross</i></td>
-    <td align="center"><b>Dot</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217837627412490/2.png](https://media.discordapp.net/attachments/1491214256711008396/1491217837627412490/2.png?ex=69d6e455&is=69d592d5&hm=83195e8dc2de6984b06ccad176f0b3914f890429e1c9469735cf26ed803731d5&=&format=webp&quality=lossless)" width="120"><br><i>Minimal center point</i></td>
-    <td align="center"><b>Circle</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217836994199663/3.png](https://media.discordapp.net/attachments/1491214256711008396/1491217836994199663/3.png?ex=69d6e455&is=69d592d5&hm=acca7d4cfb96df142ebda4be34da4c65d2024428380ce74dc4d67eb753dc358a&=&format=webp&quality=lossless)" width="120"><br><i>Clean ring</i></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Circle + Dot</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217836314464326/4.png](https://media.discordapp.net/attachments/1491214256711008396/1491217836314464326/4.png?ex=69d6e455&is=69d592d5&hm=8d75fa07bda2debbbb337e2c8df505260d66e2cfb46673da101e5dbe97a9c457&=&format=webp&quality=lossless)" width="120"><br><i>Precision hybrid</i></td>
-    <td align="center"><b>Cross Gap</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217836016795821/5.png](https://media.discordapp.net/attachments/1491214256711008396/1491217836016795821/5.png?ex=69d6e455&is=69d592d5&hm=621c7647073546899fcd837ba3ceefdd3332743a1d7b2dcabf92f1595577452d&=&format=webp&quality=lossless)" width="120"><br><i>Separated lines</i></td>
-    <td align="center"><b>X-Shape</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217835656220795/6.png](https://cdn.discordapp.com/attachments/1491214256711008396/1491217835656220795/6.png?ex=69d6e455&is=69d592d5&hm=522d21a5658464dfdf6ddd7fe1d690353401b99b561c6ae8b0e0eb907dc92a6a&)" width="120"><br><i>Diagonal cross</i></td>
-  </tr>
-  <tr>
-    <td colspan="3" align="center"><b>Triangle</b><br><img src="[https://cdn.discordapp.com/attachments/1491214256711008396/1491217835085533314/7.png](https://cdn.discordapp.com/attachments/1491214256711008396/1491217835085533314/7.png?ex=69d6e455&is=69d592d5&hm=cdca410e72bfccbc67920556c3e7939fd84debb224ea20240d956209d7b22295&)" width="120"><br><i>Forward-pointing arrow</i></td>
+    <td align="center"><b>Plus</b><br><img src="https://i.ibb.co/hFVWWzg4/crosshair-1.png" width="120"><br><i>Classic cross</i></td>
+    <td align="center"><b>Dot</b><br><img src="https://i.ibb.co/xtdC48H1/crosshair-2.png" width="120"><br><i>Minimal center point</i></td>
+    <td align="center"><b>Circle</b><br><img src="https://i.ibb.co/zVrncJng/crosshair-3.png" width="120"><br><i>Clean ring</i></td>
+    </tr>
+    <tr>
+    <td align="center"><b>Circle + Dot</b><br><img src="https://i.ibb.co/VYGyPdPm/crosshair-4.png" width="120"><br><i>Precision hybrid</i></td>
+    <td align="center"><b>Cross Gap</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-5.png" width="120"><br><i>Separated lines</i></td>
+    <td align="center"><b>X-Shape</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-6.png" width="120"><br><i>Diagonal cross</i></td>
+    </tr>
+    <tr>
+    <td colspan="3" align="center"><b>Triangle</b><br><img src="https://i.ibb.co/PswPFgbp/crosshair-7.png" width="120"><br><i>Forward-pointing arrow</i></td>
   </tr>
 </table>
 
