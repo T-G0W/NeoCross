@@ -30,7 +30,7 @@
 ---
 
 ## ✨ Features
-- 🎯 **7 Unique Crosshair Shapes** – Plus, Dot, Circle, Circle+Dot, Cross Gap, X-Shape, Triangle
+- 🎯 **6 Unique Crosshair Shapes** – Plus, Dot, Circle, Circle+Dot, Cross Gap, X-Shape
 - 🎨 **8 Vibrant Colors** – Neon Green, Red, Blue, Gold, Magenta, White, Orange, Cyan
 - 📏 **6 Size Presets** – From XS (5px) to XXL (30px)
 - ⚡ **Ultra-Lightweight** – Runs silently with near-zero system impact
@@ -66,12 +66,10 @@
 3. The crosshair appears instantly in the center of your primary monitor.
 
 ### 🐍 From Source
-```bash
-git clone https://github.com/T-G0W/tgow-crosshair-v1.git
-cd tgow-crosshair-v1
-pip install PyQt5
-python crosshair.py
-```
+    git clone https://github.com/T-G0W/tgow-crosshair-v1.git
+    cd tgow-crosshair-v1
+    pip install PyQt5
+    python crosshair.py
 
 ---
 
@@ -99,19 +97,17 @@ python crosshair.py
 ### 📹 Live Demos
 
 <table>
-<tr>
-  <td align="center">
-    <b>Menu Interface & Controls</b><br>
-      <img src="https://i.ibb.co/zWV8w5Cm/crosshair-menu.gif" width="100%" alt="TGOW Crosshair Menu Demo">
+  <tr>
+    <td align="center">
+      <b>Menu Interface & Controls</b><br>
+      <img src="https://i.ibb.co/zWV8w5Cm/crosshair-menu.gif" width="450" alt="TGOW Crosshair Menu Demo" autoplay loop>
     </td>
     <td align="center">
       <b>In-Game Usage</b><br>
-    <img src="https://i.ibb.co/mCQCGk9s/crosshair-game.gif" width="100%" alt="TGOW Crosshair In-Game Demo">
+      <img src="https://i.ibb.co/mCQCGk9s/crosshair-game.gif" width="450" alt="TGOW Crosshair In-Game Demo" autoplay loop>
     </td>
   </tr>
 </table>
-
-> 💡 *Tip: If the GIFs don't display, replace the Imgur links above with direct `.gif` URLs (remove `/a/` from the path).*
 
 ### 🎯 Available Crosshair Shapes
 
@@ -120,12 +116,12 @@ python crosshair.py
     <td align="center"><b>Plus</b><br><img src="https://i.ibb.co/hFVWWzg4/crosshair-1.png" width="120"><br><i>Classic cross</i></td>
     <td align="center"><b>Dot</b><br><img src="https://i.ibb.co/xtdC48H1/crosshair-2.png" width="120"><br><i>Minimal center point</i></td>
     <td align="center"><b>Circle</b><br><img src="https://i.ibb.co/zVrncJng/crosshair-3.png" width="120"><br><i>Clean ring</i></td>
-    </tr>
-    <tr>
+  </tr>
+  <tr>
     <td align="center"><b>Circle + Dot</b><br><img src="https://i.ibb.co/VYGyPdPm/crosshair-4.png" width="120"><br><i>Precision hybrid</i></td>
     <td align="center"><b>Cross Gap</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-5.png" width="120"><br><i>Separated lines</i></td>
-    <td align="center"><b>X-Shape</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-7.png" width="120"><br><i>Diagonal cross</i></td>
-    </tr>
+    <td align="center"><b>X-Shape</b><br><img src="https://i.ibb.co/PswPFgbp/crosshair-6.png" width="120"><br><i>Diagonal cross</i></td>
+  </tr>
 </table>
 
 ---
@@ -135,7 +131,7 @@ python crosshair.py
 Found a bug, have a suggestion, or need help? Reach out directly:
 
 - 🟣 **Discord:** `t_gow`
-- 🐙 **GitHub Issues:** [Open an Issue](https://github.com/T-G0W/tgow-crosshairv1/issues)
+- 🐙 **GitHub Issues:** [Open an Issue](https://github.com/T-G0W/tgow-crosshair-v1/issues)
 
 I actively monitor both channels and appreciate constructive feedback to improve the tool.
 
@@ -143,7 +139,7 @@ I actively monitor both channels and appreciate constructive feedback to improve
 
 ## ☕ Support Development
 
-If TGOW - CrosshairV1 improves your gameplay or workflow, consider supporting the project:
+Wenn dir CrosshairV1 oder ähnliche Tools, Software und mehr von uns hilfreich sind, dann kannst du mich gerne supporten:
 
 <div align="center">
   <a href="https://www.buymeacoffee.com/tgowscripts" target="_blank">
@@ -151,7 +147,7 @@ If TGOW - CrosshairV1 improves your gameplay or workflow, consider supporting th
   </a>
 </div>
 
-Every contribution goes directly into maintaining and expanding free tools for the community. ❤️
+Jeder Beitrag fließt direkt in die Weiterentwicklung kostenloser Tools für die Community. ❤️
 
 ---
 
