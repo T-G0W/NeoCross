@@ -124,7 +124,7 @@ python crosshair.py
     <tr>
     <td align="center"><b>Circle + Dot</b><br><img src="https://i.ibb.co/VYGyPdPm/crosshair-4.png" width="120"><br><i>Precision hybrid</i></td>
     <td align="center"><b>Cross Gap</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-5.png" width="120"><br><i>Separated lines</i></td>
-    <td align="center"><b>X-Shape</b><br><img src="[https://i.ibb.co/twZNJMhd/crosshair-6.png](https://i.ibb.co/PswPFgbp/crosshair-7.png)" width="120"><br><i>Diagonal cross</i></td>
+    <td align="center"><b>X-Shape</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-6.png" width="120"><br><i>Diagonal cross</i></td>
     </tr>
 </table>
 
