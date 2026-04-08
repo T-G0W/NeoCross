@@ -131,7 +131,7 @@
 Found a bug, have a suggestion, or need help? Reach out directly:
 
 - 🟣 **Discord:** `t_gow`
-- 🐙 **GitHub Issues:** [Open an Issue](https://github.com/T-G0W/tgow-crosshair-v1/issues)
+- 🐙 **GitHub Issues:** [Open an Issue](https://github.com/T-G0W/tgow-crosshair/issues)
 
 I actively monitor both channels and appreciate constructive feedback to improve the tool.
 
