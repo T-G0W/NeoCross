@@ -1,4 +1,4 @@
-# NeoCrossV1 by T-GOW
+# NeoCross by T-GOW
 
 A minimalist, customizable crosshair overlay for Windows. Perfect for games that lack a built-in crosshair or when you want a consistent aiming point across multiple titles.
 
