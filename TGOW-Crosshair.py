@@ -1,11 +1,11 @@
 """
-TGOW Crosshair - Minimalistisches Crosshair-Overlay für Windows
-Steuerung:
-    F2  = Menü ein-/ausblenden (immer aktiv)
-    Z   = Farbe wechseln (nur wenn Menü sichtbar)
-    C   = Größe wechseln (nur wenn Menü sichtbar)
-    X   = Form wechseln (nur wenn Menü sichtbar)
-    F3  = Programm beenden (nur wenn Menü sichtbar)
+NeoCross by T-GOW - Minimalist Crosshair Overlay for Windows
+Controls:
+    F2  = Toggle menu (always active)
+    Z   = Change color (only when menu is visible)
+    C   = Change size (only when menu is visible)
+    X   = Change shape (only when menu is visible)
+    F3  = Exit application (only when menu is visible)
 """
 
 import sys
@@ -20,9 +20,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal, QObject
 from PyQt5.QtGui import QPainter, QColor, QPen, QPainterPath
 
-# ─────────────────────────────────────────────
-#  Windows-API: Click-through
-# ─────────────────────────────────────────────
+
 GWL_EXSTYLE       = -20
 WS_EX_LAYERED     = 0x00080000
 WS_EX_TRANSPARENT = 0x00000020
@@ -34,27 +32,23 @@ def make_click_through(hwnd):
             hwnd, GWL_EXSTYLE, style | WS_EX_LAYERED | WS_EX_TRANSPARENT
         )
     except Exception as e:
-        print(f"[TGOW] Click-through Fehler: {e}")
+        print(f"[NeoCross] Click-through error: {e}")
 
-# ─────────────────────────────────────────────
-#  Virtuelle Key-Codes
-# ─────────────────────────────────────────────
+
 VK_F2 = 0x71
 VK_F3 = 0x72
 VK_Z  = 0x5A
 VK_C  = 0x43
 VK_X  = 0x58
 
-# ─────────────────────────────────────────────
-#  Konfiguration
-# ─────────────────────────────────────────────
+
 COLORS = [
-    ("#00FF88", "Neon Grün"),
-    ("#FF4444", "Rot"),
-    ("#44AAFF", "Blau"),
+    ("#00FF88", "Neon Green"),
+    ("#FF4444", "Red"),
+    ("#44AAFF", "Blue"),
     ("#FFD700", "Gold"),
     ("#FF44FF", "Magenta"),
-    ("#FFFFFF", "Weiß"),
+    ("#FFFFFF", "White"),
     ("#FF8800", "Orange"),
     ("#00FFFF", "Cyan"),
 ]
@@ -65,9 +59,7 @@ SIZE_LABELS = ["XS", "S", "M", "L", "XL", "XXL"]
 SHAPES      = ["plus", "dot", "circle", "circle_dot", "cross_gap", "x_shape", "triangle"]
 SHAPE_SYMS  = ["+",    "•",   "○",      "⊙",          "⊕",         "✕",       "△"]
 
-# ─────────────────────────────────────────────
-#  Hotkey-Thread (Polling-Methode)
-# ─────────────────────────────────────────────
+
 class HotkeySignals(QObject):
     toggle_menu = pyqtSignal()
     next_color  = pyqtSignal()
@@ -77,12 +69,8 @@ class HotkeySignals(QObject):
 
 
 class HotkeyThread(threading.Thread):
-    """
-    Polling-basierter Hotkey-Thread.
-    Blockiert NIEMALS Tasten. Liest nur den globalen Zustand.
-    Perfekt für Spiele/Overlays.
-    """
-    
+    """Polling-based hotkey thread. Does NOT block keys."""
+
     def __init__(self, signals: HotkeySignals):
         super().__init__(daemon=True, name="HotkeyThread")
         self.signals = signals
@@ -92,16 +80,13 @@ class HotkeyThread(threading.Thread):
         self._key_states = {}
 
     def set_menu_visible(self, visible: bool):
-        """Update, ob das Menü gerade sichtbar ist"""
         with self._lock:
             self._menu_visible = visible
 
     def _is_pressed(self, vk):
-        """Prüft, ob Taste aktuell gedrückt ist"""
         return bool(ctypes.windll.user32.GetAsyncKeyState(vk) & 0x8000)
 
     def _check_press(self, name, vk):
-        """Erkennt einen NEUEN Tastendruck (Edge Detection)"""
         pressed = self._is_pressed(vk)
         was_pressed = self._key_states.get(name, False)
         self._key_states[name] = pressed
@@ -113,11 +98,9 @@ class HotkeyThread(threading.Thread):
                 with self._lock:
                     visible = self._menu_visible
 
-                # F2: IMMER aktiv
                 if self._check_press('F2', VK_F2):
                     self.signals.toggle_menu.emit()
 
-                # Andere Tasten: NUR wenn Menü sichtbar
                 if visible:
                     if self._check_press('F3', VK_F3):
                         self.signals.quit_app.emit()
@@ -130,16 +113,14 @@ class HotkeyThread(threading.Thread):
 
             except Exception:
                 pass
-            
-            time.sleep(0.04)  # ~25 Hz Abfrage (sehr reaktionsschnell, 0% Blockierung)
+
+            time.sleep(0.04)
 
     def stop(self):
         self._running = False
 
 
-# ─────────────────────────────────────────────
-#  Crosshair-Widget
-# ─────────────────────────────────────────────
+
 class CrosshairWidget(QWidget):
 
     def __init__(self):
@@ -242,9 +223,7 @@ class CrosshairWidget(QWidget):
             p.setPen(mp); p.setBrush(Qt.NoBrush); p.drawPath(path)
 
 
-# ─────────────────────────────────────────────
-#  Menü-Widget (oben rechts)
-# ─────────────────────────────────────────────
+
 class MenuWidget(QWidget):
 
     def __init__(self, crosshair: CrosshairWidget):
@@ -280,9 +259,9 @@ class MenuWidget(QWidget):
         lay.setSpacing(12)
 
         hdr = QHBoxLayout()
-        t = QLabel("TGOW Crosshair")
+        t = QLabel("NeoCrossV1")
         t.setStyleSheet("color:#fff;font-size:13px;font-weight:700;letter-spacing:1.5px;")
-        b = QLabel("OVERLAY")
+        b = QLabel("BY T-GOW")
         b.setStyleSheet("""color:#00FF88;background:rgba(0,255,136,0.12);
             border:1px solid rgba(0,255,136,0.3);border-radius:4px;
             font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 6px;""")
@@ -290,7 +269,7 @@ class MenuWidget(QWidget):
         lay.addLayout(hdr)
         lay.addWidget(self._sep())
 
-        lay.addWidget(self._lbl("FORM  [X]"))
+        lay.addWidget(self._lbl("SHAPE  [X]"))
         self._shape_btns = []
         r = QHBoxLayout(); r.setSpacing(5)
         for i, sym in enumerate(SHAPE_SYMS):
@@ -298,7 +277,7 @@ class MenuWidget(QWidget):
             self._shape_btns.append(btn); r.addWidget(btn)
         r.addStretch(); lay.addLayout(r)
 
-        lay.addWidget(self._lbl("FARBE  [Z]"))
+        lay.addWidget(self._lbl("COLOR  [Z]"))
         self._color_btns = []
         r2 = QHBoxLayout(); r2.setSpacing(5)
         for i, (hx, _) in enumerate(COLORS):
@@ -307,7 +286,7 @@ class MenuWidget(QWidget):
             self._color_btns.append(btn); r2.addWidget(btn)
         r2.addStretch(); lay.addLayout(r2)
 
-        lay.addWidget(self._lbl("GRÖSSE  [C]"))
+        lay.addWidget(self._lbl("SIZE  [C]"))
         self._size_btns = []
         r3 = QHBoxLayout(); r3.setSpacing(5)
         for i, lbl in enumerate(SIZE_LABELS):
@@ -316,7 +295,7 @@ class MenuWidget(QWidget):
         r3.addStretch(); lay.addLayout(r3)
 
         lay.addWidget(self._sep())
-        hint = QLabel("F2 Menü  ·  Z Farbe  ·  C Größe  ·  X Form  ·  F3 Beenden")
+        hint = QLabel("F2 Menu  ·  Z Color  ·  C Size  ·  X Shape  ·  F3 Exit")
         hint.setStyleSheet("color:rgba(255,255,255,0.22);font-size:9px;letter-spacing:0.5px;")
         hint.setAlignment(Qt.AlignCenter)
         lay.addWidget(hint)
@@ -403,14 +382,12 @@ class MenuWidget(QWidget):
         self._hotkey_callback = cb
 
 
-# ─────────────────────────────────────────────
-#  Hauptanwendung
-# ─────────────────────────────────────────────
-class TGOWApp:
+
+class NeoCrossApp:
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.app.setApplicationName("TGOW Crosshair")
+        self.app.setApplicationName("NeoCrossV1")
         self.app.setQuitOnLastWindowClosed(False)
 
         self.crosshair = CrosshairWidget()
@@ -462,9 +439,6 @@ class TGOWApp:
         sys.exit(self.app.exec_())
 
 
-# ─────────────────────────────────────────────
-#  Start
-# ─────────────────────────────────────────────
 if __name__ == "__main__":
     try:
         ctypes.windll.shcore.SetProcessDpiAwareness(2)
@@ -472,4 +446,4 @@ if __name__ == "__main__":
         try: ctypes.windll.user32.SetProcessDPIAware()
         except Exception: pass
 
-    TGOWApp().run()
+    NeoCrossApp().run()
