@@ -2,7 +2,7 @@
 
 A minimalist, customizable crosshair overlay for Windows. Perfect for games that lack a built-in crosshair or when you want a consistent aiming point across multiple titles.
 
-![NeoCrossV1 Preview](https://img.shields.io/badge/Platform-Windows%2010%20%7C%20Windows%2011-blue)
+![NeoCross Preview](https://img.shields.io/badge/Platform-Windows%2010%20%7C%20Windows%2011-blue)
 ![License](https://img.shields.io/badge/License-Custom-red)
 ![Version](https://img.shields.io/badge/Version-1.0.0-green)
 ![RAM](https://img.shields.io/badge/RAM-17MB-brightgreen)
@@ -23,7 +23,7 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 ## System Requirements
 
 - **Operating System**: Windows 10 or Windows 11
-- **Architecture**: 64-bit (x64)
+- **Architecture**: 64-bit (x64) or 32-bit (x86)
 - **Dependencies**: None (standalone executable)
 
 ---
@@ -32,9 +32,9 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ### Latest Release - Version 1.0.0
 
-[![Download NeoCross (v1.0.0)](https://img.shields.io/badge/Download-NeoCrossV1%201.0.0%20Setup%20(x64)-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCrossV1/releases/download/v1.0.0/NeoCrossV1_1.0.0_x64_Setup.exe)
+[![Download NeoCross](https://img.shields.io/badge/Download-NeoCross%20Setup.exe-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCross/releases/download/v1.0.0/NeoCross_Setup.exe)
 
-> **Note**: This installer is for 64-bit Windows only. Most modern systems use 64-bit.
+> **Note**: Works on both 64-bit and 32-bit Windows systems.
 
 ---
 
@@ -49,7 +49,7 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ### Portable (No Installation)
 
-1. Download the standalone **NeoCrossV1_x64.exe** from the release assets
+1. Download the standalone **NeoCross.exe** from the release assets
 2. Place it anywhere on your system
 3. Double-click to run
 
@@ -102,7 +102,7 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ```bash
 pip install PyQt5
-python NeoCrossV1.py
+python NeoCross.py
 ```
 
 ### Creating a Standalone Executable
@@ -124,7 +124,7 @@ Configuration:
 
 ## License
 
-NeoCrossV1 is provided free of charge for personal use. You may modify the source code for personal use, but redistribution and commercial use are prohibited. See the [LICENSE](LICENSE) file for details.
+NeoCross is provided free of charge for personal use. You may modify the source code for personal use, but redistribution and commercial use are prohibited. See the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -137,8 +137,8 @@ NeoCrossV1 is provided free of charge for personal use. You may modify the sourc
 
 ## Support
 
-For issues, feature requests, or questions, please open an issue on the [GitHub Issues page](https://github.com/T-GOW/NeoCrossV1/issues).
+For issues, feature requests, or questions, please open an issue on the [GitHub Issues page](https://github.com/T-GOW/NeoCross/issues).
 
 ---
 
-*NeoCrossV1 - Precision at your fingertips.*
+*NeoCross - Precision at your fingertips.*
