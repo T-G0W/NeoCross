@@ -9,6 +9,8 @@ Controls:
 """
 
 import sys
+import os
+import json
 import ctypes
 import ctypes.wintypes
 import threading
@@ -58,6 +60,34 @@ SIZE_LABELS = ["XS", "S", "M", "L", "XL", "XXL"]
 
 SHAPES      = ["plus", "dot", "circle", "circle_dot", "cross_gap", "x_shape", "triangle"]
 SHAPE_SYMS  = ["+",    "•",   "○",      "⊙",          "⊕",         "✕",       "△"]
+
+
+SETTINGS_DIR = os.path.join(os.getenv("APPDATA"), "NeoCross")
+SETTINGS_FILE = os.path.join(SETTINGS_DIR, "settings.json")
+
+DEFAULT_SHAPE = 5
+DEFAULT_COLOR = 3
+DEFAULT_SIZE  = 1
+
+
+def load_settings():
+    if os.path.exists(SETTINGS_FILE):
+        try:
+            with open(SETTINGS_FILE, "r") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"shape": DEFAULT_SHAPE, "color": DEFAULT_COLOR, "size": DEFAULT_SIZE}
+
+
+def save_settings(shape_idx, color_idx, size_idx):
+    try:
+        os.makedirs(SETTINGS_DIR, exist_ok=True)
+        data = {"shape": shape_idx, "color": color_idx, "size": size_idx}
+        with open(SETTINGS_FILE, "w") as f:
+            json.dump(data, f, indent=2)
+    except Exception:
+        pass
 
 
 class HotkeySignals(QObject):
@@ -125,9 +155,10 @@ class CrosshairWidget(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.color_idx = 0
-        self.size_idx  = 2
-        self.shape_idx = 0
+        settings = load_settings()
+        self.color_idx = settings["color"]
+        self.size_idx  = settings["size"]
+        self.shape_idx = settings["shape"]
         self.thickness = 2
         self._setup()
         self._center()
@@ -158,9 +189,9 @@ class CrosshairWidget(QWidget):
     @property
     def shape(self): return SHAPES[self.shape_idx]
 
-    def next_color(self): self.color_idx = (self.color_idx+1)%len(COLORS); self.update()
-    def next_size(self):  self.size_idx  = (self.size_idx+1)%len(SIZES);   self.update()
-    def next_shape(self): self.shape_idx = (self.shape_idx+1)%len(SHAPES); self.update()
+    def next_color(self): self.color_idx = (self.color_idx+1)%len(COLORS); save_settings(self.shape_idx, self.color_idx, self.size_idx); self.update()
+    def next_size(self):  self.size_idx  = (self.size_idx+1)%len(SIZES);   save_settings(self.shape_idx, self.color_idx, self.size_idx); self.update()
+    def next_shape(self): self.shape_idx = (self.shape_idx+1)%len(SHAPES); save_settings(self.shape_idx, self.color_idx, self.size_idx); self.update()
 
     def paintEvent(self, _):
         p   = QPainter(self)
@@ -334,15 +365,15 @@ class MenuWidget(QWidget):
 
     def _set_shape(self, i):
         if not self._visible: return
-        self.crosshair.shape_idx = i; self.crosshair.update(); self._ref_shapes()
+        self.crosshair.shape_idx = i; save_settings(i, self.crosshair.color_idx, self.crosshair.size_idx); self.crosshair.update(); self._ref_shapes()
 
     def _set_color(self, i):
         if not self._visible: return
-        self.crosshair.color_idx = i; self.crosshair.update(); self._ref_colors()
+        self.crosshair.color_idx = i; save_settings(self.crosshair.shape_idx, i, self.crosshair.size_idx); self.crosshair.update(); self._ref_colors()
 
     def _set_size(self, i):
         if not self._visible: return
-        self.crosshair.size_idx = i; self.crosshair.update(); self._ref_sizes()
+        self.crosshair.size_idx = i; save_settings(self.crosshair.shape_idx, self.crosshair.color_idx, i); self.crosshair.update(); self._ref_sizes()
 
     def _ref_shapes(self):
         for i, b in enumerate(self._shape_btns):
@@ -418,6 +449,7 @@ class NeoCrossApp:
     
     def _quit(self):
         if self.menu._visible:
+            save_settings(self.crosshair.shape_idx, self.crosshair.color_idx, self.crosshair.size_idx)
             self.app.quit()
 
     def _color(self):
