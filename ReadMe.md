@@ -32,7 +32,7 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ### Latest Release - Version 1.0.0
 
-[![Download NeoCrossV1](https://img.shields.io/badge/Download-NeoCrossV1%201.0.0%20Setup%20(x64)-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCrossV1/releases/download/v1.0.0/NeoCrossV1_1.0.0_x64_Setup.exe)
+[![Download NeoCross (v1.0.0)](https://img.shields.io/badge/Download-NeoCrossV1%201.0.0%20Setup%20(x64)-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCrossV1/releases/download/v1.0.0/NeoCrossV1_1.0.0_x64_Setup.exe)
 
 > **Note**: This installer is for 64-bit Windows only. Most modern systems use 64-bit.
 
@@ -42,10 +42,10 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ### Using the Installer (Recommended)
 
-1. Download **NeoCrossV1_1.0.0_x64_Setup.exe** from the link above
+1. Download **NeoCross_Setup.exe** from the link above
 2. Run the installer
 3. Follow the on-screen instructions
-4. Launch NeoCrossV1 from your Start Menu or Desktop shortcut
+4. Launch NeoCross from your Start Menu or Desktop shortcut
 
 ### Portable (No Installation)
 
@@ -115,7 +115,7 @@ auto-py-to-exe
 ```
 
 Configuration:
-- **Script Location**: `NeoCrossV1.py`
+- **Script Location**: `NeoCross.py`
 - **Onefile**: Onefile
 - **Console Window**: Console Based
 - **Icon**: (optional) Add your own `.ico` file
@@ -131,7 +131,7 @@ NeoCrossV1 is provided free of charge for personal use. You may modify the sourc
 ## Credits
 
 **Developer**: T-GOW  
-**Project**: NeoCrossV1
+**Project**: NeoCross
 
 ---
 
