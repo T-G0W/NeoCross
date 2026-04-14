@@ -40,18 +40,12 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ## Installation
 
-### Using the Installer (Recommended)
+### Using the Installer
 
 1. Download **NeoCross_Setup.exe** from the link above
 2. Run the installer
 3. Follow the on-screen instructions
 4. Launch NeoCross from your Start Menu or Desktop shortcut
-
-### Portable (No Installation)
-
-1. Download the standalone **NeoCross.exe** from the release assets
-2. Place it anywhere on your system
-3. Double-click to run
 
 ---
 
