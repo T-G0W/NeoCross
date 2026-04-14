@@ -1,115 +1,63 @@
-# TGOW - CrosshairV1
+# NeoCrossV1 by T-GOW
 
-<div align="center">
+A minimalist, customizable crosshair overlay for Windows. Perfect for games that lack a built-in crosshair or when you want a consistent aiming point across multiple titles.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-lightgrey.svg)
-![RAM](https://img.shields.io/badge/RAM-17MB-green.svg)
-![CPU](https://img.shields.io/badge/CPU-0%25-brightgreen.svg)
-[![Discord](https://img.shields.io/badge/Discord-t_gow-5865F2.svg?logo=discord&logoColor=white)](https://discord.com)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a-Coffee-FFDD00.svg?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/t-gow)
-
-**A minimalist, performance-optimized crosshair overlay for Windows**
-
-</div>
-
-> 📝 **Note:** The first preview below is recorded in German for demonstration purposes. The actual downloaded software features a complete **English interface**.
+![NeoCrossV1 Preview](https://img.shields.io/badge/Platform-Windows%2010%20%7C%20Windows%2011-blue)
+![License](https://img.shields.io/badge/License-Custom-red)
+![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![RAM](https://img.shields.io/badge/RAM-17MB-brightgreen)
 
 ---
 
-## 📋 Table of Contents
-- [✨ Features](#-features)
-- [💻 System Requirements & Resource Usage](#-system-requirements--resource-usage)
-- [📥 Download & Installation](#-download--installation)
-- [🎮 Usage & Controls](#-usage--controls)
-- [🖼️ Preview](#-preview)
-- [📞 Support & Contact](#-support--contact)
-- [☕ Support Development](#-support-development)
-- [📜 License](#-license)
+## Features
+
+- **7 Crosshair Shapes**: Plus, Dot, Circle, Circle+Dot, Cross with Gap, X-Shape, Triangle
+- **8 Color Options**: Neon Green, Red, Blue, Gold, Magenta, White, Orange, Cyan
+- **6 Size Presets**: XS to XXL for every preference and resolution
+- **Always-On-Top Overlay**: Stays visible above all windows and games
+- **Click-Through Design**: Does not interfere with mouse clicks or gameplay
+- **Ultra Lightweight**: Uses only **17 MB RAM** — runs silently in the background
 
 ---
 
-## ✨ Features
-- 🎯 **6 Unique Crosshair Shapes** – Plus, Dot, Circle, Circle+Dot, Cross Gap, X-Shape
-- 🎨 **8 Vibrant Colors** – Neon Green, Red, Blue, Gold, Magenta, White, Orange, Cyan
-- 📏 **6 Size Presets** – From XS (5px) to XXL (30px)
-- ⚡ **Ultra-Lightweight** – Runs silently with near-zero system impact
-- 🎮 **Game-Friendly** – Zero input blocking when the menu is hidden
-- 🖱️ **Click-Through** – Overlay never interferes with mouse events
-- 🔧 **Instant Controls** – Keyboard-driven menu with zero lag
-- 📍 **Auto-Recenter** – Stays perfectly centered across resolution changes
+## System Requirements
+
+- **Operating System**: Windows 10 or Windows 11
+- **Architecture**: 64-bit (x64)
+- **Dependencies**: None (standalone executable)
 
 ---
 
-## 💻 System Requirements & Resource Usage
+## Download
 
-| Requirement | Specification |
-|-------------|---------------|
-| **Operating System** | Windows 10 / Windows 11 |
-| **Python Version** | Python 3.8+ (for source builds) |
-| **Dependencies** | `PyQt5` |
+### Latest Release - Version 1.0.0
 
-| Resource | Usage |
-|----------|-------|
-| **RAM** | 17 MB |
-| **CPU** | 0% |
-| **Disk** | 0% |
-| **Network** | 0% |
+[![Download NeoCrossV1](https://img.shields.io/badge/Download-NeoCrossV1%201.0.0%20Setup%20(x64)-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCrossV1/releases/download/v1.0.0/NeoCrossV1_1.0.0_x64_Setup.exe)
+
+> **Note**: This installer is for 64-bit Windows only. Most modern systems use 64-bit.
 
 ---
 
-## 📥 Download & Installation
+## Installation
 
-### 📦 Pre-Built (Recommended)
-1. Download the latest release from the [Releases](https://github.com/T-G0W/tgow-crosshair-v1/releases) page.
-2. Run `TGOW-CrosshairV1.exe`.
-3. The crosshair appears instantly in the center of your primary monitor.
+### Using the Installer (Recommended)
 
-### 🐍 From Source
-    git clone https://github.com/T-G0W/tgow-crosshair-v1.git
-    cd tgow-crosshair-v1
-    pip install PyQt5
-    python crosshair.py
+1. Download **NeoCrossV1_1.0.0_x64_Setup.exe** from the link above
+2. Run the installer
+3. Follow the on-screen instructions
+4. Launch NeoCrossV1 from your Start Menu or Desktop shortcut
 
----
+### Portable (No Installation)
 
-## 🎮 Usage & Controls
-
-| Key | Action | Availability |
-|:---:|--------|--------------|
-| **`F2`** | Toggle Settings Menu (Show/Hide) | ✅ Always Active |
-| **`Z`** | Cycle Through Colors | 🔒 Menu Visible Only |
-| **`C`** | Cycle Through Sizes | 🔒 Menu Visible Only |
-| **`X`** | Cycle Through Shapes | 🔒 Menu Visible Only |
-| **`F3`** | Exit Program | 🔒 Menu Visible Only |
-
-### 💡 How It Works
-1. Launch the application → Crosshair appears centered.
-2. Press **`F2`** to open the settings panel (top-right corner).
-3. Customize your crosshair via buttons or hotkeys.
-4. Press **`F2`** again to hide the menu and return to your game.
-5. While hidden, **all hotkeys (`Z`, `C`, `X`, `F3`) are fully disabled**, ensuring zero interference with gameplay. Only `F2` remains active to reopen the menu.
+1. Download the standalone **NeoCrossV1_x64.exe** from the release assets
+2. Place it anywhere on your system
+3. Double-click to run
 
 ---
 
-## 🖼️ Preview
+## Crosshair Shapes
 
-### 📹 Live Demos
-
-<table>
-  <tr>
-    <td align="center">
-      <b>Menu Interface & Controls</b><br>
-      <img src="https://ibb.co/zWV8w5Cm" width="450" alt="TGOW Crosshair Menu Demo" autoplay loop>
-    </td>
-    <td align="center">
-      <b>In-Game Usage</b><br>
-      <img src="https://i.ibb.co/mCQCGk9s/crosshair-game.gif" width="450" alt="TGOW Crosshair In-Game Demo" autoplay loop>
-    </td>
-  </tr>
-</table>
-
-### 🎯 Available Crosshair Shapes
+### Available Crosshair Shapes
 
 <table>
   <tr>
@@ -122,48 +70,75 @@
     <td align="center"><b>Cross Gap</b><br><img src="https://i.ibb.co/twZNJMhd/crosshair-5.png" width="120"><br><i>Separated lines</i></td>
     <td align="center"><b>X-Shape</b><br><img src="https://i.ibb.co/PswPFgbp/crosshair-6.png" width="120"><br><i>Diagonal cross</i></td>
   </tr>
+  <tr>
+    <td align="center"><b>Triangle</b><br><img src="https://i.ibb.co/hFVWWzg4/crosshair-1.png" width="120"><br><i>Angled precision</i></td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
 ---
 
-## 📞 Support & Contact
+## Controls
 
-Found a bug, have a suggestion, or need help? Reach out directly:
-
-- 🟣 **Discord:** `t_gow`
-- 🐙 **GitHub Issues:** [Open an Issue](https://github.com/T-G0W/tgow-crosshair/issues)
-
-I actively monitor both channels and appreciate constructive feedback to improve the tool.
-
----
-
-## ☕ Support Development
-
-Wenn dir CrosshairV1 oder ähnliche Tools, Software und mehr von uns hilfreich sind, dann kannst du mich gerne supporten:
-
-<div align="center">
-  <a href="https://www.buymeacoffee.com/tgowscripts" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217">
-  </a>
-</div>
-
-Jeder Beitrag fließt direkt in die Weiterentwicklung kostenloser Tools für die Community. ❤️
+| Key | Action |
+|-----|--------|
+| **F2** | Toggle menu visibility (always active) |
+| **Z** | Cycle through colors (when menu is visible) |
+| **C** | Cycle through sizes (when menu is visible) |
+| **X** | Cycle through shapes (when menu is visible) |
+| **F3** | Exit application (when menu is visible) |
 
 ---
 
-## 📜 License
+## Building from Source
 
-This software is **proprietary** and protected under a custom license.
+### Prerequisites
 
-✅ **Allowed:** Private & commercial use (unmodified)  
-❌ **Restricted:** Modification, redistribution, sublicensing, or integration into other projects **requires prior written permission** from the author.
+- Python 3.8 or higher
+- PyQt5
 
-📄 View the full legal terms in the [`LICENSE`](LICENSE) file.  
-📬 Permission requests: Contact `t_gow` on Discord or open a GitHub Issue.
+### Setup
+
+```bash
+pip install PyQt5
+python NeoCrossV1.py
+```
+
+### Creating a Standalone Executable
+
+Using [auto-py-to-exe](https://github.com/brentvollebregt/auto-py-to-exe):
+
+```bash
+pip install auto-py-to-exe
+auto-py-to-exe
+```
+
+Configuration:
+- **Script Location**: `NeoCrossV1.py`
+- **Onefile**: Onefile
+- **Console Window**: Console Based
+- **Icon**: (optional) Add your own `.ico` file
 
 ---
 
-<div align="center">
-  <sub>Made with ❤️ by <strong>T-GOW</strong></sub><br>
-  <a href="#tgow---crosshairv1">⬆ Back to Top</a>
-</div>
+## License
+
+NeoCrossV1 is provided free of charge for personal use. You may modify the source code for personal use, but redistribution and commercial use are prohibited. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Credits
+
+**Developer**: T-GOW  
+**Project**: NeoCrossV1
+
+---
+
+## Support
+
+For issues, feature requests, or questions, please open an issue on the [GitHub Issues page](https://github.com/T-GOW/NeoCrossV1/issues).
+
+---
+
+*NeoCrossV1 - Precision at your fingertips.*
