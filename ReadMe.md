@@ -4,7 +4,7 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ![NeoCross Preview](https://img.shields.io/badge/Platform-Windows%2010%20%7C%20Windows%2011-blue)
 ![License](https://img.shields.io/badge/License-Custom-red)
-![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![Version](https://img.shields.io/badge/Version-1.0.1-green)
 ![RAM](https://img.shields.io/badge/RAM-17MB-brightgreen)
 
 ---
@@ -17,6 +17,7 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 - **Always-On-Top Overlay**: Stays visible above all windows and games
 - **Click-Through Design**: Does not interfere with mouse clicks or gameplay
 - **Ultra Lightweight**: Uses only **17 MB RAM** — runs silently in the background
+- **Auto-Save Settings**: Your shape, color, and size are saved automatically and restored on next launch
 
 ---
 
@@ -30,9 +31,9 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ## Download
 
-### Latest Release - Version 1.0.0
+### Latest Release - Version 1.0.1
 
-[![Download NeoCross](https://img.shields.io/badge/Download-NeoCross%20Setup.exe-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCross/releases/download/v1.0.0/NeoCross_Setup.exe)
+[![Download NeoCross](https://img.shields.io/badge/Download-NeoCross%20Setup.exe-00FF88?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/T-GOW/NeoCross/releases/download/v1.0.1/NeoCross_Setup.exe)
 
 > **Note**: Works on both 64-bit and 32-bit Windows systems.
 
@@ -40,12 +41,18 @@ A minimalist, customizable crosshair overlay for Windows. Perfect for games that
 
 ## Installation
 
-### Using the Installer
+### Using the Installer (Recommended)
 
 1. Download **NeoCross_Setup.exe** from the link above
 2. Run the installer
 3. Follow the on-screen instructions
 4. Launch NeoCross from your Start Menu or Desktop shortcut
+
+### Portable (No Installation)
+
+1. Download the standalone **NeoCross.exe** from the release assets
+2. Place it anywhere on your system
+3. Double-click to run
 
 ---
 
