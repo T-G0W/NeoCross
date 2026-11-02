@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="text" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f8"/>
+      <stop offset="1" stop-color="#b8c0cb"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b6ffe0"/>
+      <stop offset="0.5" stop-color="#00ff88"/>
+      <stop offset="1" stop-color="#00c46f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="40" fill="#0b0e12"/>
+  <image href="logo.svg" x="40" y="40" width="280" height="280"/>
+  <text x="350" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="136" font-weight="800"
+        letter-spacing="4" fill="url(#text)">NEO<tspan fill="url(#green)">CROSS</tspan></text>
+  <text x="356" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600"
+        letter-spacing="6" fill="#8a929e">CROSSHAIR OVERLAY · BY T-GOW</text>
+</svg>

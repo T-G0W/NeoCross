@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- NeoCross by T-GOW. The hexagon with the rounded upper-right corner is the T-GOW signature. -->
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#272c35"/>
+      <stop offset="1" stop-color="#0f1216"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a6ffd8"/>
+      <stop offset="0.5" stop-color="#00ff88"/>
+      <stop offset="1" stop-color="#008f56"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcfff0"/>
+      <stop offset="0.45" stop-color="#00ff88"/>
+      <stop offset="1" stop-color="#00b868"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00ff88" stop-opacity="0.30"/>
+      <stop offset="0.6" stop-color="#00ff88" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <path d="M 263.0 44.0 L 395.1 120.3 A 96 96 0 0 1 443.1 203.4 L 443.1 355.9 A 14 14 0 0 1 436.1 368.0 L 263.0 468.0 A 14 14 0 0 1 249.0 468.0 L 75.9 368.0 A 14 14 0 0 1 68.9 355.9 L 68.9 156.1 A 14 14 0 0 1 75.9 144.0 L 249.0 44.0 A 14 14 0 0 1 263.0 44.0 Z"
+        fill="url(#body)" stroke="url(#rim)" stroke-width="28" stroke-linejoin="round"/>
+  <path d="M 260.0 76.3 L 377.6 144.2 A 72 72 0 0 1 413.6 206.6 L 413.6 342.4 A 8 8 0 0 1 409.6 349.3 L 260.0 435.7 A 8 8 0 0 1 252.0 435.7 L 102.4 349.3 A 8 8 0 0 1 98.4 342.4 L 98.4 169.6 A 8 8 0 0 1 102.4 162.7 L 252.0 76.3 A 8 8 0 0 1 260.0 76.3 Z"
+        fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="3"/>
+
+  <circle cx="256" cy="256" r="168" fill="url(#glow)"/>
+  <circle cx="256" cy="256" r="96" fill="none" stroke="url(#mark)" stroke-width="22"/>
+  <g fill="url(#mark)" stroke="#14171c" stroke-width="10" paint-order="stroke">
+    <rect x="245" y="104" width="22" height="112" rx="11"/>
+    <rect x="245" y="296" width="22" height="112" rx="11"/>
+    <rect x="104" y="245" width="112" height="22" rx="11"/>
+    <rect x="296" y="245" width="112" height="22" rx="11"/>
+  </g>
+  <circle cx="256" cy="256" r="15" fill="url(#mark)"/>
+</svg>

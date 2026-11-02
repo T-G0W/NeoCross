@@ -1,0 +1,111 @@
+[package]
+name = "neocross"
+version = "2.0.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["T-GOW"]
+description = "NeoCross – a minimalist, click-through crosshair overlay, by T-GOW"
+homepage = "https://github.com/T-G0W/NeoCross"
+repository = "https://github.com/T-G0W/NeoCross"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["crosshair", "overlay", "gaming", "reticle"]
+categories = ["games", "gui"]
+publish = false
+build = "build.rs"
+
+[[bin]]
+name = "neocross"
+path = "src/main.rs"
+
+[features]
+default = []
+# Renders the README images (crosshair gallery, menu screenshots). Never part of a release build.
+docs = []
+
+[dependencies]
+eframe = { version = "0.37", default-features = false, features = ["default_fonts", "glow", "x11", "wayland"] }
+tiny-skia = { version = "0.11", default-features = false, features = ["std", "simd", "png-format"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tray-icon = "0.26"
+# Same winit as eframe; used for the native window handle and the monitor list.
+winit = { version = "0.30", default-features = false, features = ["rwh_06"] }
+
+[target.'cfg(windows)'.dependencies.windows-sys]
+version = "0.61"
+features = [
+    "Win32_Foundation",
+    "Win32_Globalization",
+    "Win32_Graphics_Dwm",
+    "Win32_Graphics_Gdi",
+    "Win32_Security",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Input",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+]
+
+[target.'cfg(not(windows))'.dependencies]
+global-hotkey = "0.9"
+sys-locale = "0.3"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+gtk = "0.18"
+
+[build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+# Linux packages, built by packaging/linux/package.sh
+[package.metadata.deb]
+name = "neocross"
+maintainer = "T-GOW <210194347+T-G0W@users.noreply.github.com>"
+copyright = "2026, T-GOW"
+extended-description = "A minimalist, click-through crosshair overlay with 21 crosshair styles, a tray icon and global hotkeys. No telemetry, no network access."
+section = "games"
+priority = "optional"
+depends = "$auto, libayatana-appindicator3-1 | libappindicator3-1"
+assets = [
+    ["target/release/neocross", "usr/bin/", "755"],
+    ["packaging/linux/neocross.desktop", "usr/share/applications/", "644"],
+    ["assets/logo-512.png", "usr/share/icons/hicolor/512x512/apps/neocross.png", "644"],
+    ["assets/logo-128.png", "usr/share/icons/hicolor/128x128/apps/neocross.png", "644"],
+    ["target/THIRD_PARTY_LICENSES.txt", "usr/share/doc/neocross/", "644"],
+    ["README.md", "usr/share/doc/neocross/", "644"],
+    ["LICENSE-MIT", "usr/share/doc/neocross/", "644"],
+    ["LICENSE-APACHE", "usr/share/doc/neocross/", "644"],
+]
+
+[package.metadata.generate-rpm]
+summary = "Click-through crosshair overlay for games"
+assets = [
+    { source = "target/release/neocross", dest = "/usr/bin/neocross", mode = "755" },
+    { source = "packaging/linux/neocross.desktop", dest = "/usr/share/applications/neocross.desktop", mode = "644" },
+    { source = "assets/logo-512.png", dest = "/usr/share/icons/hicolor/512x512/apps/neocross.png", mode = "644" },
+    { source = "assets/logo-128.png", dest = "/usr/share/icons/hicolor/128x128/apps/neocross.png", mode = "644" },
+    { source = "target/THIRD_PARTY_LICENSES.txt", dest = "/usr/share/doc/neocross/THIRD_PARTY_LICENSES.txt", mode = "644", doc = true },
+    { source = "LICENSE-MIT", dest = "/usr/share/licenses/neocross/LICENSE-MIT", mode = "644", doc = true },
+    { source = "LICENSE-APACHE", dest = "/usr/share/licenses/neocross/LICENSE-APACHE", mode = "644", doc = true },
+]
+
+[package.metadata.generate-rpm.requires]
+gtk3 = "*"
+libxdo = "*"
+libayatana-appindicator-gtk3 = "*"
