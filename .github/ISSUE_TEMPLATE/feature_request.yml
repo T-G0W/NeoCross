@@ -1,0 +1,22 @@
+name: Idea or wish
+description: A new crosshair, a feature, or something that should work differently
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping to make NeoCross better! English or German is fine.
+        Please check the open issues first; if your idea is already there, a 👍 reaction is enough.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: For a new crosshair, a sketch or a screenshot helps a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help you?
+      description: Which game or situation is it for?

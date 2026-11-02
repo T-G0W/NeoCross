@@ -1,0 +1,13 @@
+NeoCross 2.0 ist komplett neu in Rust geschrieben.
+
+- 21 Fadenkreuze (die 7 Klassiker plus T-Form, Chevron, Ecken, Quadrat, Raute, Sechseck, Zielfernrohr, Absehen, Segmente, Mil-Dot, Stern, Drei Punkte, Klammern und Halo)
+- Größe, Dicke, Lücke, Deckkraft, Drehung, Kontur und Mittelpunkt frei einstellbar; jede Farbe über den Farbwähler
+- Live-Vorschau auf einer Spielszene, dunklem und hellem Hintergrund, mit 2×- und 4×-Zoom
+- Bildschirmauswahl und pixelgenaue Feinjustierung des Zielpunkts
+- Tray-Symbol mit Schnellzugriff auf Form, Farbe, Größe und Autostart
+- Die Hotkeys aus 1.x (F2, Z, C, X, F3) plus V für Ein/Aus und Shift für rückwärts; die Menütaste ist frei wählbar
+- Braucht bei geschlossenem Menü etwa 2 MB privaten Arbeitsspeicher, keine GPU, und nimmt deinem Spiel nie eine Taste weg
+- Setup für Windows (x64 und x86) und ein portables Zip, Pakete für Linux (.deb, .rpm, .tar.gz) und macOS (.dmg)
+- Deine Einstellungen aus 1.x werden automatisch übernommen
+- Keine Telemetrie, kein Netzwerkzugriff
+- Open Source: wahlweise unter MIT oder Apache-2.0

@@ -1,0 +1,13 @@
+NeoCross 2.0 is a complete rewrite in Rust.
+
+- 21 crosshair styles (the 7 classics plus T-Shape, Chevron, Corners, Square, Diamond, Hexagon, Scope, Reticle, Segments, Mil-Dot, Star, Tri-Dot, Brackets and Halo)
+- Free sizing, thickness, gap, opacity, rotation, outline and center dot; any color via the color picker
+- Live preview on a game scene, dark and bright backgrounds, with 2× and 4× zoom
+- Monitor selection and pixel-exact fine-tuning of the aim point
+- Tray icon with quick access to shape, color, size and autostart
+- The hotkeys of 1.x (F2, Z, C, X, F3) plus V for on/off and Shift for backwards; the menu key is configurable
+- Uses about 2 MB of private memory while the menu is closed, no GPU, never takes keys away from your game
+- Setup for Windows (x64 and x86) and a portable zip, packages for Linux (.deb, .rpm, .tar.gz) and macOS (.dmg)
+- Your 1.x settings are taken over automatically
+- No telemetry, no network access
+- Open source: dual-licensed under MIT OR Apache-2.0

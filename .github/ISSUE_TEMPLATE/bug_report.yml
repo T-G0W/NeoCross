@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in NeoCross does not work as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! English or German is fine.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem as clearly as you can. Which game, and does it run fullscreen, borderless or windowed?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Press ...
+        3. ...
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+  - type: input
+    id: version
+    attributes:
+      label: NeoCross version
+      description: Shown at the top of the menu, next to the name.
+      placeholder: "2.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - Linux (X11)
+        - Linux (Wayland)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: displays
+    attributes:
+      label: Displays
+      description: Number of monitors, resolution and scaling (for example 2560×1440 at 125 %), if the problem is about position or size.

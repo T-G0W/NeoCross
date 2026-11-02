@@ -1,0 +1,90 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Inno Setup
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe")) { choco install innosetup -y --no-progress }
+
+      - name: Setup (x64 + x86) and portable zip
+        shell: pwsh
+        run: ./release/build-release.ps1
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: windows
+          path: |
+            dist/release/NeoCross-Setup-*.exe
+            dist/release/NeoCross-*-windows-x64-portable.zip
+            dist/release/RELEASE_NOTES.md
+
+  linux:
+    # The oldest supported runner: its glibc lets the binary run on more distributions.
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Libraries and packagers
+        run: |
+          sudo apt-get update && sudo apt-get install -y libgtk-3-dev libxdo-dev libayatana-appindicator3-dev
+          cargo install --locked cargo-deb cargo-generate-rpm
+
+      - name: .deb, .rpm and .tar.gz
+        run: sh packaging/linux/package.sh
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: linux
+          path: |
+            dist/release/*.deb
+            dist/release/*.rpm
+            dist/release/*.tar.gz
+
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Universal app and .dmg
+        run: sh packaging/macos/bundle.sh
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: macos
+          path: dist/release/*.dmg
+
+  publish:
+    needs: [windows, linux, macos]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Checksums
+        working-directory: dist
+        run: sha256sum NeoCross-* *.deb *.rpm > SHA256SUMS.txt
+
+      - uses: softprops/action-gh-release@v3
+        with:
+          name: NeoCross ${{ github.ref_name }}
+          body_path: dist/RELEASE_NOTES.md
+          make_latest: true
+          files: |
+            dist/NeoCross-*
+            dist/*.deb
+            dist/*.rpm
+            dist/SHA256SUMS.txt

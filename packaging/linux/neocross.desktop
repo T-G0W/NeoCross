@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=NeoCross
+GenericName=Crosshair Overlay
+GenericName[de]=Fadenkreuz-Overlay
+Comment=Click-through crosshair overlay for games
+Comment[de]=Klick-durchlässiges Fadenkreuz für Spiele
+Exec=neocross
+Icon=neocross
+Terminal=false
+Categories=Game;Utility;
+Keywords=crosshair;overlay;reticle;fadenkreuz;
+StartupWMClass=neocross
